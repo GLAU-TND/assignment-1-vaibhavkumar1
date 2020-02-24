@@ -49,6 +49,20 @@ public class ContactMenuMethod {
         } else {
             email = "---";
         }
+        public void viewContact() {
+            System.out.println("---Here are all your contacts---");
 
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println("-------- * -------- * -------- * --------");
+                System.out.println("First Name: " + list.get(i).getName() + "\nLast Name: " + list.get(i).getLastName());
+                System.out.print("Mobile no: ");
+                for (int j = 0; j < mobileNo.size(); j++)
+                    System.out.print(list.get(i).getMobileNo().get(j) + " ");
+                System.out.println();
+                System.out.println("Email Address: " + list.get(i).getEmail());
+                System.out.println("-------- * -------- * -------- * --------");
+
+            }
+        }
     }
 }
