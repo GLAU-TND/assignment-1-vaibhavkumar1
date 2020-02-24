@@ -65,8 +65,8 @@ public class ContactMenuMethod {
         }
         public void searchContact() {
             System.out.println("You could search for a contact from their first names:");
-            Scanner scan = new Scanner(System.in);
-            String firstName = scan.next();
+            Scanner scan1 = new Scanner(System.in);
+            String firstName = scan1.next();
 
             int count = 0;
             for (int i = 0; i < list.size(); i++) {
@@ -93,7 +93,20 @@ public class ContactMenuMethod {
                 }
             } else
                 System.out.println("no match found.");
+        }
+        public void deleteContact() {
+            System.out.println("Here are all your contacts: ");
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println((i + 1) + ". " + list.get(i).getName() + " " + list.get(i).getLastName());
+            }
+            System.out.println("Press the number against the contact to delete it:");
+            Scanner scan2 = new Scanner(System.in);
+            int delete = scan2.nextInt();
+
+            System.out.println(list.get(delete - 1).getName() + "'s contact deleted from list!");
+            list.remove(delete - 1);
 
         }
+
     }
 }
