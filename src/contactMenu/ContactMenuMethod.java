@@ -38,4 +38,17 @@ public class ContactMenuMethod {
         } else {
         }
     }
+    private void addemail() {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Do you want to add email address? (y/n)");
+        String add = scan.next();
+        if (add.equals("y")) {
+            email = scan.next();
+
+        } else {
+            email = "---";
+        }
+
+    }
 }
