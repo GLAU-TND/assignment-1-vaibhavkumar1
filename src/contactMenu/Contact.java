@@ -58,9 +58,8 @@ public class Contact implements Comparable<Contact> {
         this.contact = contact;
     }
 
-
     @Override
     public int compareTo(Contact o) {
-        return 0;
+        return name.compareTo(contact.name);
     }
 }
