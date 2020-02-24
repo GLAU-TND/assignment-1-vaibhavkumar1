@@ -10,6 +10,14 @@ public class Contact implements Comparable<Contact> {
     private Contact contact;
     private String email;
 
+    public Contact(String name, String lastName, String email, LinkedList<Integer> mobileNo) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.mobileNo = mobileNo;
+
+    }
+
     @Override
     public int compareTo(Contact o) {
         return 0;
