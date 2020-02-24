@@ -61,8 +61,39 @@ public class ContactMenuMethod {
                 System.out.println();
                 System.out.println("Email Address: " + list.get(i).getEmail());
                 System.out.println("-------- * -------- * -------- * --------");
-
             }
+        }
+        public void searchContact() {
+            System.out.println("You could search for a contact from their first names:");
+            Scanner scan = new Scanner(System.in);
+            String firstName = scan.next();
+
+            int count = 0;
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).getName().equals(firstName)) {
+                    count++;
+                }
+            }
+
+            if (count > 0) {
+                System.out.println(count + " match are found :");
+                for (int i = 0; i < list.size(); i++) {
+                    if (list.get(i).getName().equals(firstName)) {
+                        System.out.println("-------- * -------- * -------- * --------");
+                        System.out.println("First Name: " + list.get(i).getName() + "\nLast Name: " + list.get(i).getLastName());
+                        System.out.print("Mobile No: ");
+                        for (int j = 0; j < mobileNo.size(); j++) {
+                            System.out.print(list.get(i).getMobileNo().get(j) + " ");
+                        }
+                        System.out.println();
+                        System.out.println("Email Address: " + list.get(i));
+                        System.out.println("-------- * -------- * -------- * --------");
+                    }
+
+                }
+            } else
+                System.out.println("no match found.");
+
         }
     }
 }
